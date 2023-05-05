@@ -1,0 +1,13 @@
+pipeline {
+    agent none
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+    }
+    stages {
+        stage('Publish Event') {
+            steps {
+                publishEvent event: jsonEvent('{"event":"imagePush","name":"maven","tag":"3.6.3-openjdk-15"}'), verbose: true
+            }
+        }
+    }
+}
