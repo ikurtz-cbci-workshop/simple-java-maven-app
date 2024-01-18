@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Publish Event') {
             steps {
-                publishEvent event: jsonEvent('{"event":"imagePush","name":"maven","tag":"3.6.3-openjdk-15"}'), verbose: true
+                publishEvent event: jsonEvent('{"event":"imagePush","name":"maven","tag":"3.9.4-eclipse-temurin-11"}'), verbose: true
             }
         }
     }
